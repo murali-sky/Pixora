@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Gallery</title>
+  <link rel="stylesheet" href="image.css" />
+  <script src="image.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">FRAME<span>.</span></a>
+    <p>Stories through a lens.</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">THE COLLECTION</p>
+      <h1>Visual <span>Gallery</span></h1>
+      <p class="subtitle">
+        A little collection of beautiful places and moments.
+      </p>
+    </section>
+
+    <nav class="filters" aria-label="Filter images">
+      <button class="filter active" data-category="all">All</button>
+      <button class="filter" data-category="nature">Nature</button>
+      <button class="filter" data-category="architecture">Architecture</button>
+      <button class="filter" data-category="animals">Animals</button>
+    </nav>
+
+    <section class="gallery" id="gallery" aria-label="Image gallery">
+      <article class="gallery-item" data-category="nature"
+        data-title="Mountain Escape">
+        <img src="images/mountain.jpg"
+          alt="Mountain peaks under a beautiful sky" />
+        <div class="image-info">
+          <span>NATURE</span>
+          <h2>Mountain Escape</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="architecture"
+        data-title="Modern Lines">
+        <img src="images/building.jpg"
+          alt="Contemporary white architectural building" />
+        <div class="image-info">
+          <span>ARCHITECTURE</span>
+          <h2>Modern Lines</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="animals"
+        data-title="Wild Beauty">
+        <img src="images/dino.webp"
+          alt="Fiery Dino" />
+        <div class="image-info">
+          <span>ANIMALS</span>
+          <h2>Wild Beauty</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="nature"
+        data-title="Ocean Dreams">
+        <img src="images/waves.jpg"
+          alt="Ocean waves meeting the shore" />
+        <div class="image-info">
+          <span>NATURE</span>
+          <h2>Ocean Dreams</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="architecture"
+        data-title="City Geometry">
+        <img src="images/city.jpg"
+          alt="City skyline at dusk" />
+        <div class="image-info">
+          <span>ARCHITECTURE</span>
+          <h2>City Geometry</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="animals"
+        data-title="Into the Wild">
+        <img src="images/lion.jpg"
+          alt="Lion resting in its natural habitat" />
+        <div class="image-info">
+          <span>ANIMALS</span>
+          <h2>Into the Wild</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="nature"
+        data-title="Forest Trails">
+        <img src="images/forest.jpg"
+          alt="Sunlight filtering through a forest" />
+        <div class="image-info">
+          <span>NATURE</span>
+          <h2>Forest Trails</h2>
+        </div>
+      </article>
+
+      <article class="gallery-item" data-category="architecture"
+        data-title="Golden Structure">
+        <img src="images/sculpture.webp"
+          alt="Sculptural architectural design" />
+        <div class="image-info">
+          <span>ARCHITECTURE</span>
+          <h2>Golden Structure</h2>
+        </div>
+      </article>
+
+      
+    </section>
+
+    <p class="count" id="count" aria-live="polite"></p>
+  </main>
+
+  <footer>
+    <p>FRAME. &copy; 2026 — Made with curiosity.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox"
+    role="dialog" aria-modal="true"
+    aria-label="Image viewer" aria-hidden="true">
+    <button class="close" id="closeBtn"
+      aria-label="Close image viewer">&times;</button>
+
+    <button class="nav-btn prev" id="prevBtn"
+      aria-label="Previous image">&#10094;</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxTitle"></p>
+      <p id="lightboxCounter"></p>
+    </div>
+
+    <button class="nav-btn next" id="nextBtn"
+      aria-label="Next image">&#10095;</button>
+  </div>
+</body>
+</html>
